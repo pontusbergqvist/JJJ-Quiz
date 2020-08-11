@@ -104,7 +104,7 @@ const Quiz = (_ => {
   };
 
   const nextTrigger = _ => {
-    if (currentIndex === lastQuestion.index) {
+    if (currentIndex === lastQuestion.index && answerExists()) {
     checkAnswer(currentGuess);
     initEndscreen();
     console.log($body.firstElementChild.children[4].firstElementChild)
